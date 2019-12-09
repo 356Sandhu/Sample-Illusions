@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Raleway', Arial, sans-serif;
+  background: white;
+}
+
+header{
+  padding: 2rem 3rem;
+  display: flex;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.text-block{
+  flex: 1;
+  padding-right: 1.5rem;
+}
+
+.icons{
+  margin-top: 9rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-block h1{
+  color: block;
+  padding-top: 4rem;
+  font-weight: 700;
+  font-size: 3.8rem;
+  animation: text-drop 2s ease-out;
+}
+
+.text-block h3{
+  color: black;
+  padding-top: 2rem;
+  font-weight: 400;
+  font-size: 3.3rem;
+  animation: text-fly-in 2s forwards ease-out;
+}
+
+.text-block h2{
+  margin-top: 3rem;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: appear 2s forwards ease-out;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#magic{
+  position: relative;
+  top: 5rem;
+}
+
+#all{
+  position: relative;
+  top: 9rem;
+}
+
+i{
+  animation: icon-fly-in 2s forwards ease-out;
+  position: relative;
+  top: -4rem;
+  cursor: pointer;
+}
+
+i:hover{
+  color: red;
+}
+
+
+.headerImage{
+  flex: 1;
+  text-align: center;
+  padding-left: 1.5rem;
+}
+
+.headerImage img{
+  max-width: 100%;
+  max-height: 100%;
+  animation: scaleUp 2s forwards ease-out; 
+}
+
+
+@keyframes icon-fly-in{
+  from{
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to{
+    left: 0;
+    opacity: 1;
+  }
+}
+
+
+@keyframes text-fly-in{
+  0%{
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100%{
+    left: 0;
+    opacity: 1;
+  }
+}
+
+
+@keyframes text-drop{
+  from{
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  to{
+    left: 0;
+    opacity: 1;
+  }
+}
+
+
+@keyframes scaleUp{
+  from{
+    transform: scale(0);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes appear{
+  from{
+    transform: scale(0);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
